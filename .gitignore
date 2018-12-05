@@ -1,0 +1,10 @@
+# Terraform
+**/.terraform
+**/*.tfstate*
+crash.log
+*_rds_log_state
+.gradle
+.idea
+*.iml
+*.ipr
+*.iws
