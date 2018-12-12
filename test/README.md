@@ -23,7 +23,7 @@ pip install python-lambda-local
 * test locally
 
 ```
-export DB_INSTANCE_IDENTIFIERS="privacyhub-stage-consentobjectionregistry-instance-1"
+export DB_INSTANCE_IDENTIFIERS="instance-1"
 export INITIAL_DAYS_TO_INGEST=1
 export BUCKET_NAME="db-logs-state-stage"
 python-lambda-local -l lib/ -f lambda_handler -t 300 ../source/main.py event.json
