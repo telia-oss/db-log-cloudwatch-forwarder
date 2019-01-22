@@ -19,7 +19,7 @@ resource "aws_iam_role" "lambda_role" {
                 "s3:PutBucketVersioning"
             ],
             "Resource": [
-                "arn:aws:s3:::db-logs-state-stage",
+                "arn:aws:s3:::${var.db_logs_state_bucket_name}",
                 "arn:aws:logs:eu-west-1:*:*",
                 "arn:aws:logs:eu-west-1:*:log-group:rds_logs:log-stream:*",
                 "arn:aws:rds:eu-west-1:*:db:*"
