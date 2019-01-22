@@ -40,7 +40,7 @@ EOF
 
 data "archive_file" "lambda_zip" {
   type        = "zip"
-  source_file = "https://raw.githubusercontent.com/telia-oss/db-log-cloudwatch-forwarder/master/source/main.py"
+  source_file = "${path.module}/../source/main.py"
   output_path = "lambda_function.zip"
 }
 
