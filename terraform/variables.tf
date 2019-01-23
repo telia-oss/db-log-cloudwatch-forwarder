@@ -17,6 +17,7 @@ variable "log_group_names" {
 
 variable "lambda_handler" {
   description = "The handler for the Lambda function"
+  default     = "main.lambda_handler"
 }
 
 variable "lamda_runtime" {
