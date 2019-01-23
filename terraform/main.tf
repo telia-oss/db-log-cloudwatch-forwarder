@@ -99,3 +99,15 @@ resource "aws_s3_bucket" "b" {
     enabled = true
   }
 }
+
+resource "aws_cloudwatch_event_rule" "scheduled_rule" {
+  name                = "scheduled lambda rule"
+  description         = "Every day at 1am"
+  schedule_expression = "0 0 1 * * ?"
+}
+
+resource "aws_cloudwatch_event_target" "sns" {
+  rule      = "${aws_cloudwatch_event_rule.scheduled_rule.name}"
+  target_id = "db_log_cloudwatch_forwarder"
+  arn       = "${aws_lambda_function.db_log_cloudwatch_forwarder.arn}"
+}
