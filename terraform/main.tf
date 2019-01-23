@@ -101,7 +101,7 @@ resource "aws_s3_bucket" "b" {
 }
 
 resource "aws_cloudwatch_event_rule" "scheduled_rule" {
-  name                = "scheduled lambda rule"
+  name                = "scheduled_lambda_rule"
   description         = "Every day at 1am"
   schedule_expression = "0 0 1 * * ?"
 }
