@@ -90,3 +90,12 @@ resource "aws_lambda_permission" "allow_cloudwatch" {
   function_name = "${aws_lambda_function.db_log_cloudwatch_forwarder.function_name}"
   principal     = "logs.amazonaws.com"
 }
+
+resource "aws_s3_bucket" "b" {
+  bucket = "${var.db_logs_state_bucket_name}"
+  acl    = "private"
+
+  versioning {
+    enabled = true
+  }
+}
