@@ -121,7 +121,7 @@ def lambda_handler(event, context):
 
     DEFAULT_INITIAL_DAYS_TO_INGEST = 1
     DEFAULT_LOG_GROUP = "rds_logs"
-    DEFAULT_BUCKET_NAME = "{}-rds-logs-state".format(account_id)
+    DEFAULT_BUCKET_NAME = "db_logs_state"
 
     # Start from 1 day ago if it hasn't been run yet
     try:

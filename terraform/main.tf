@@ -78,7 +78,7 @@ resource "aws_lambda_function" "db_log_cloudwatch_forwarder" {
 
   environment {
     variables = {
-      bucket_name             = "${var.db_logs_state_bucket_name}"
+      BUCKET_NAME             = "${var.db_logs_state_bucket_name}"
       DB_INSTANCE_IDENTIFIERS = "${var.DB_INSTANCE_IDENTIFIERS}"
     }
   }
