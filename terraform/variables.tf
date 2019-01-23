@@ -37,7 +37,7 @@ variable "lambda_memory_size" {
 
 variable "db_logs_state_bucket_name" {
   description = "The bucket that records the forwarded db logs"
-  default     = "db-logs-state"
+  default     = "db-log-state"
 }
 
 variable "lambda_name" {
