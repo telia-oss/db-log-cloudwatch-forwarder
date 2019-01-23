@@ -73,6 +73,7 @@ data "archive_file" "lambda_zip" {
 }
 
 resource "aws_lambda_function" "db_log_cloudwatch_forwarder" {
+  filename      = "${path.module}/lambda_function.zip"
   function_name = "${var.lambda_name}"
   role          = "${aws_iam_role.lambda_role.arn}"
   handler       = "${var.lambda_handler}"
