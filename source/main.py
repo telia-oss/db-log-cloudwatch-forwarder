@@ -2,8 +2,8 @@
 #
 # BUCKET_NAME
 # DB_INSTANCE_IDENTIFIERS separated with ","
+# LOG_GROUP
 # (optional) INITIAL_DAYS_TO_INGEST
-# (optional) LOG_GROUP
 #
 # Notes:
 # Codes are format with yapf,

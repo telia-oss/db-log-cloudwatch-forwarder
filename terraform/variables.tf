@@ -9,10 +9,8 @@ variable "filter_patterns" {
   type        = "list"
 }
 
-variable "log_group_names" {
+variable "log_group_name" {
   description = "List of Cloudwatch log group names"
-  default     = []
-  type        = "list"
 }
 
 variable "lambda_handler" {
@@ -37,7 +35,6 @@ variable "lambda_memory_size" {
 
 variable "db_logs_state_bucket_name" {
   description = "The bucket that records the forwarded db logs"
-  default     = "db-log-state"
 }
 
 variable "lambda_name" {
