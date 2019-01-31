@@ -61,14 +61,9 @@ resource "aws_iam_role_policy_attachment" "attach" {
   policy_arn = "${aws_iam_policy.lambda_policy.arn}"
 }
 
-data "archive_file" "lambda_zip" {
-  type        = "zip"
-  source_file = "${path.module}/../source/main.py"
-  output_path = "${path.module}/lambda_function.zip"
-}
-
 resource "aws_lambda_function" "db_log_cloudwatch_forwarder" {
-  filename      = "${path.module}/lambda_function.zip"
+  s3_bucket     = "${var.lambda_s3_bucket}"
+  s3_key        = "${var.s3_key}"
   function_name = "${var.lambda_name}"
   role          = "${aws_iam_role.lambda_role.arn}"
   handler       = "${var.lambda_handler}"

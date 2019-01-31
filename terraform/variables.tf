@@ -44,3 +44,11 @@ variable "lambda_name" {
 variable "DB_INSTANCE_IDENTIFIERS" {
   description = "db instances whose logs will be forwarded to cloudwatch, separated with ','"
 }
+
+variable "s3_key" {
+  description = "The s3 key for the Lambda artifact."
+}
+
+variable "lambda_s3_bucket" {
+  description = "The bucket where the lambda function that forwards the db logs to cloudwatch."
+}
