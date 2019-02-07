@@ -8,3 +8,6 @@ crash.log
 *.iml
 *.ipr
 *.iws
+
+*.pyc
+*.zip
